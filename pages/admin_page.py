@@ -5,9 +5,8 @@ class AdminPage(BasePage):
 
     ADMIN_MENU = "//span[text()='Admin']"
 
-    # SEARCH_USERNAME = ("//label[text()='Username']/../following-sibling::div/input")
-
-    SEARCH_USERNAME= "(// input[contains( @class ,'oxd-input')])[2]"
+    SEARCH_USERNAME = ("//label[text()='Username']/../following-sibling::div/input")
+    # SEARCH_USERNAME= "(//input[contains( @class ,'oxd-input')])[2]"
     SEARCH_BUTTON = "//button[@type='submit']"
 
     # RESULT_CELL = ("//div[@role='cell'][contains(.,'Admin')]")
