@@ -23,11 +23,9 @@ class AdminPage(BasePage):
 
         self.click(self.SEARCH_BUTTON)
 
-        self.page.locator(self.RESULT_ROWS).first.wait_for(state="visible")
+        self.page.wait_for_selector(self.RESULT_ROWS, timeout=5000)
 
     def search_result_exists(self):
-        rows = self.page.locator(self.RESULT_ROWS )
-
-        print(f"Rows found: {rows.count()}")
-
-        return rows.count() > 0
+        rows = self.page.locator(self.RESULT_ROWS).count()
+        print("Rows found:", rows)
+        return rows > 0
