@@ -42,14 +42,20 @@ orangehrm-ui-automation/
 │   └── admin/
 │       └── test_search_user.py
 
+├── testdata/
+│   └── urls.json
+
 ├── utils/
 │   ├── config.py
-│   └── logger.py
+│   ├── logger.py
+│   └── testdat_json_reader.py
 
 ├── reports/
+│   └── report.html
 
 ├── conftest.py
 ├── pytest.ini
+├── .env
 ├── requirements.txt
 └── README.md
 ```
@@ -136,7 +142,7 @@ The OrangeHRM demo environment is public and data may change over time, so this 
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/shivanid29/orangehrm-ui-automation.git .
 cd orangehrm-ui-automation
 ```
 
@@ -252,13 +258,3 @@ The workflow is triggered on:
 
 ---
 
-## Future Improvements
-
-Possible enhancements include:
-
-* Parallel execution using Pytest XDist
-* Allure reporting integration
-* Data-driven testing
-* Cross-browser execution
-* Automatic screenshot capture on failures
-* Environment-based configuration

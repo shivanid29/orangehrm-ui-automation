@@ -19,5 +19,5 @@ def test_invalid_login(page):
     actual_error = login.get_error_message()
 
     logger.info(f"Error message received: {actual_error}")
-
+    login.take_screenshot('login_error')
     assert ( actual_error   == "Invalid credentials" )

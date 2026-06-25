@@ -21,4 +21,5 @@ def test_valid_login(page):
     logger.info("User Logged In")
 
     assert (dashboard.is_dashboard_loaded())
+    login.take_screenshot('login_success')
     logger.info("Dashboard Loaded Successfully")
