@@ -10,7 +10,7 @@ def test_invalid_login(page):
 
     login = LoginPage(page)
 
-    login.open()
+    # login.open()
     logger.info("Attempting login with invalid credentials")
 
     login.login(

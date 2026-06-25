@@ -1,3 +1,13 @@
-BASE_URL = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
-USERNAME = "Admin"
-PASSWORD = "admin123"
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+env_path = BASE_DIR / ".env"
+
+if env_path.exists():
+    load_dotenv(env_path)
+
+class Config:
+    USERNAME = os.getenv("ORANGE_USERNAME")
+    PASSWORD = os.getenv("ORANGE_PASSWORD")

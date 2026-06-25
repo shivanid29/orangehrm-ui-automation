@@ -1,5 +1,4 @@
 from pages.base_page import BasePage
-from utils.config import BASE_URL
 from utils.logger import get_logger
 
 
@@ -13,15 +12,11 @@ class LoginPage(BasePage):
     LOGIN_BUTTON = 'button[type="submit"]'
     ERROR_MESSAGE = ".oxd-alert-content-text"
 
-    def open(self):
-        logger.info("Opening OrangeHRM")
-        self.page.goto(BASE_URL)
-
     def login(self, username, password):
         try:
             self.fill( self.USERNAME_INPUT, username )
 
-            self.fill(self.PASSWORD_INPUT,  password)
+            self.fill(self.PASSWORD_INPUT,password)
 
             self.click(self.LOGIN_BUTTON)
 

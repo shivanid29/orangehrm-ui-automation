@@ -156,10 +156,11 @@ playwright install chromium
 
 ## Running Tests
 
-Run all tests:
+You can execute the UI automation tests using the following command:
 
+Depening on which env you wish to run , the key can be passed
 ```bash
-pytest
+pytest --env dev
 ```
 
 Run a specific test file:

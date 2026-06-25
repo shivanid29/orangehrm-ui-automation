@@ -7,4 +7,4 @@ class DashboardPage(BasePage):
 
     def is_dashboard_loaded(self):
 
-        return (self.get_text(self.DASHBOARD_HEADER) == "Dashboard" )
+        return self.get_text(self.DASHBOARD_HEADER) == "Dashboard"
